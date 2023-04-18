@@ -1,12 +1,17 @@
 #ifndef CLASSROBOT_H
 #define CLASSROBOT_H
 #include "classservo.h"
+#include"qvector.h"
+#define TRANGTHHAI {0,0,0,0,0}
+#define VITRI_1 80
+#define VITRI_2 100
+#define VITRI_3 120
 
-#define TRANGTHHAI_1 {1,2,3,4,5}
-#define TRANGTHHAI_2 {1,2,3,4,5}
-#define TRANGTHHAI_3 {1,2,3,4,5}
-#define TRANGTHHAI_4 {1,2,3,4,5}
-#define TRANGTHHAI_5 {1,2,3,4,5}
+#define SERVO_PIN 0//11
+#define SERVO_PIN_1 1//12
+#define SERVO_PIN_2 2//13
+#define SERVO_PIN_3 3//15
+#define SERVO_PIN_4 4 //16
 class classrobot
 {
 public:
@@ -18,12 +23,14 @@ private:
     classservo* servo3;
     classservo* servo4;
     classservo* servo5;
+    QVector<int> trangthai;
 public:
-    void settrangthai1();
-    void settrangthai2();
-    void settrangthai3();
-    void settrangthai4();
-    void settrangthai5();
+    void setvat(int a);
+    void getvat(int a);
+    void settrangthai(int a,int b);
+    void setgoc(QVector<int>& vectorgoc);
+    void thucthi(int a,int b);
+
 
 };
 
